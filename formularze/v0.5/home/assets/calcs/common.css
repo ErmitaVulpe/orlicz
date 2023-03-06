@@ -1,0 +1,40 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap');
+
+/* :root {
+    --side-menu-width: 17.5vw;
+    --side-menu-padding-left: 1.5vw;
+} */
+
+::-webkit-scrollbar {
+    width: min(0.8vw, 16px);
+}
+
+::-webkit-scrollbar-track {
+    background: #202324;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #575e62;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #767d81;
+}
+
+html {
+    scroll-behavior: smooth !important;
+    /* overflow-y: scroll; */
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    margin: 0;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    color: #fff;
+    font-size: 1.25vw;
+    overflow-y: hidden;
+    overflow-x: visible;
+}
