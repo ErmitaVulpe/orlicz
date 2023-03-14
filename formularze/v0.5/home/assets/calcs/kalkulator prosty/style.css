@@ -1,0 +1,90 @@
+#calc {
+    padding: 1.5vw;
+    background-color: #202225;
+    border-radius: 1vw;
+    display: flex;
+    flex-direction: column;
+    gap: 1vw;
+    -webkit-box-shadow: 0 0.5vw 0 0 rgba(20, 21, 22, 1);
+    -moz-box-shadow: 0 0.5vw 0 0 rgba(20, 21, 22, 1);
+    box-shadow: 0 0.5vw 0 0 rgba(20, 21, 22, 1);
+    width: 21vw;
+}
+
+#equation {
+    padding: 0 0.8vw 0.8vw 0;
+}
+
+#output {
+    background-color: #141516;
+    padding: 0.8vw;
+}
+
+#m {
+    padding: 0.8vw 0.8vw 0 0;
+    position: relative;
+}
+
+#m::before {
+    content: "M:";
+    position: absolute;
+    left: 0;
+}
+
+#equation,
+#output,
+#m {
+    text-align: right;
+    overflow-wrap: break-word;
+}
+
+#buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-areas: 
+    'mrc m-plus m-minus ce'
+    'b7 b8 b9 div'
+    'b4 b5 b6 times'
+    'b1 b2 b3 minus'
+    'b0 dot equals plus';
+    gap: 0.75vw 0.5vw;
+}
+
+#buttons div {
+    text-align: center;
+    padding: 0.5vw 0.8vw;
+    background-color: #191b1d;
+    border-radius: 0.5vw;
+    cursor: pointer;
+    -webkit-box-shadow: 0 0.25vw 0 0 rgba(20, 21, 22, 1);
+    -moz-box-shadow: 0 0.25vw 0 0 rgba(20, 21, 22, 1);
+    box-shadow: 0 0.25vw 0 0 rgba(20, 21, 22, 1);
+    transition: 0.15s;
+}
+
+#buttons div:active {
+    transform: translateY(0.25vw);
+    -webkit-box-shadow: 0 0 0 0 rgba(20, 21, 22, 1);
+    -moz-box-shadow: 0 0 0 0 rgba(20, 21, 22, 1);
+    box-shadow: 0 0 0 0 rgba(20, 21, 22, 1);
+}
+
+#m-plus { grid-area: m-plus; }
+#m-minus{ grid-area: m-minus; }
+#ce     { grid-area: ce; }
+#b0     { grid-area: b0; }
+#b1     { grid-area: b1; }
+#b2     { grid-area: b2; }
+#b3     { grid-area: b3; }
+#b4     { grid-area: b4; }
+#b5     { grid-area: b5; }
+#b6     { grid-area: b6; }
+#b7     { grid-area: b7; }
+#b8     { grid-area: b8; }
+#b9     { grid-area: b9; }
+#div    { grid-area: div; }
+#times  { grid-area: times; }
+#minus  { grid-area: minus; }
+#plus   { grid-area: plus; }
+#equals { grid-area: equals; }
+#dot    { grid-area: dot; }

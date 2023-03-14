@@ -35,6 +35,12 @@ body {
     user-select: none;
     color: #fff;
     font-size: 1.25vw;
-    overflow-y: hidden;
-    overflow-x: visible;
+    overflow: hidden;
+}
+
+#main {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
 }
