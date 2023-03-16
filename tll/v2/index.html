@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="pl" id="top">
+<head>
+  <meta charset=UTF-8>
+  <title>Tabele listy łącza Tymon Wilczek 3G</title>
+  <!-- <link rel="icon" href="img/icon.webp"> -->
+  <link rel="stylesheet" href="assets/style.css">                                                             <!-- Import style -->
+  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">  <!-- Import custom font for sortable table icons -->
+  <script defer src="assets/scripts/popup.js"></script>                                                       <!-- generate pupup itself -->
+  <script defer src="assets/scripts/gen_table1.js"></script>                                                  <!-- Generate table 1 and the scrollmenu -->
+  <script defer src="assets/scripts/gen_table2.js"></script>                                                  <!-- Generate table 2 -->
+  <script defer src="assets/scripts/gen_modal.js"></script>                                                   <!-- Generate popup content -->
+  <script defer src="assets/scripts/merge_cells.js"></script>                                                 <!-- Merging cells in table 2 -->
+  <script defer src="assets/scripts/sortable_table.js"></script>                                              <!-- Sorting of table 2 -->
+  <script defer src="assets/scripts/toggle_table2.js"></script>                                               <!-- Switching the color of table 2 -->
+</head>
+<body>
+  <div class="main-container">
+    <div class="main">
+      <div class="table1" id="table1">
+      </div>
+      <div class="scrollmenu">
+        <div class="toggle">
+          <label class="switch">
+            <input type="checkbox" id="switch-toggle" onclick="toggle()">
+            <span class="slider round"></span>
+          </label>
+        </div>
+        <div class="dropdown" id="dropdown">
+          <div class="dropdown-title"><span>Wybierz samolot ▼</span></div>
+          <div class="dropdown-content" id="dropddown-content">
+            <div id="dropddown-content-grid"></div>
+          </div>
+        </div>
+        <div class="placeholder"></div>
+      </div>
+      <div class="table2">
+        <table id="table2">
+          <tbody id="table2-header">
+            <tr>
+              <th rowspan="2">Lp.</th>
+              <th rowspan="2" onclick="sortTable(0)">
+                <div>
+                  <span>Nazwa</span>
+                  <i class="fa fa-fw fa-sort"></i>
+                </div>
+              </th>
+              <th colspan="6">Dane techniczne</th>
+              <th rowspan="2" onclick="sortTable(7)">
+                <div>
+                  <span>Pierwszy lot</span>
+                  <i class="fa fa-fw fa-sort"></i>
+                </div>
+              </th>
+              <th colspan="2">Producent</th>
+              <th rowspan="2">Kraj</th>
+            </tr>
+            <tr>
+              <th onclick="sortTable(1)">
+                <div title="Masa własna&#013;w kilogramach">
+                  <span>Masa [kg]</span>
+                  <i class="fa fa-fw fa-sort"></i>
+                </div>
+              </th>
+              <th onclick="sortTable(2)">
+                <div title="Siła odrzutu generowana przez&#013;silniki w kilo newtonach">
+                  <span>Moc [KN]</span>
+                  <i class="fa fa-fw fa-sort"></i>
+                </div>
+              </th>
+              <th onclick="sortTable(3)">
+                <div title="Thrust to weight ratio.&#013;Stosunek mocy do masy.">
+                  <span>TWR</span>
+                  <i class="fa fa-fw fa-sort"></i>
+                </div>
+              </th>
+              <th onclick="sortTable(4)">
+                <div title="Maksymaly dystans jaki samolot&#013;jest wstanie przelecieć bez tankowania">
+                  <span>Zasięg [km]</span>
+                  <i class="fa fa-fw fa-sort"></i>
+                </div>
+              </th>
+              <th onclick="sortTable(5)">
+                <div title="Wymiary fizyczne&#013;w metrach">
+                  <span>Wymiary [m]<ul><li>Długość</li><li>Szerokość</li><li>Wysokość</li></ul></span>
+                  <i class="fa fa-fw fa-sort"></i>
+                </div>
+              </th>
+              <th onclick="sortTable(6)">
+                <div title="Maksymalna udokumentowana prędkość&#013;w kilometrach na godzinę">
+                  <span>Maksymalna prędkość [km/h]</span>
+                  <i class="fa fa-fw fa-sort"></i>
+                </div>
+              </th>
+              <th>Logo</th>
+              <th>Nazwa</th>
+            </tr>
+          </tbody>
+          <tbody class="table2-content" id="table2-content"></tbody>
+        </table>
+      </div>
+      <span class="footer">2023: &copy; Tymon Wilczek 3G</span>
+    </div>
+  </div>
+  <div id="overlay"></div>
+  <div id="modal-container"></div>
+</body>
+</html>

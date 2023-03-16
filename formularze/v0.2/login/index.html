@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="../assets/ico.webp">
+  <link rel="stylesheet" href="assets/style.css">
+  <script type="module" src="assets/script.js"></script>
+  <title>Formularze logowanie</title>
+</head>
+<body>
+  <div id="logging-in" class="main-container">
+    <span class="main-title">Logowanie</span>
+    <div id="email" class="input-container">
+      <input id="email-text" placeholder="Email" type="email">
+      <span class="incorrect-input" id="incorrect-mail">Nieprawidłowy Email</span>
+    </div>
+    <div id="password" class="input-container">
+      <input id="password-text" placeholder="Hasło" type="password">
+      <span class="incorrect-input" id="incorrect-password">Nieprawidłowe hasło</span>
+    </div>
+    <button class="big-button" id="logging-in-button" type="submit">Zaloguj</button>
+    <hr>
+    <div id="other-buttons">
+      <div id="reset-redirect-container">
+        <span id="reset-redirect-title">Zapomniałeś hasło?</span>
+        <div id="reset-redirect-button">
+          <span>Zresetuj je!</span>
+        </div>
+      </div>
+      <div id="registration-redirect-container">
+        <span id="registration-redirect-title">Nie posiadasz konta?</span>
+        <div id="registration-redirect-button">
+          <span>Zarejestruj się!</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="registration" class="main-container disabled">
+    <div class="go-back">
+      <div class="go-back-button" id="registration-go-back"><span>&lt; Wróć do logownia</span></div>
+    </div>
+    <span class="main-title">Rejestracja</span>
+    <div id="registration-email" class="input-container">
+      <input id="registration-email-text" placeholder="Podaj Email">
+      <span class="incorrect-input" id="registration-incorrect-mail">Email niepoprawny lub jest w użyciu</span>
+    </div>
+    <div id="registration-name" class="input-container">
+      <input id="registration-name-text" placeholder="Podaj nazwę użytkownika">
+      <span class="incorrect-input" id="registration-incorrect-placeholder">Nazwa użytkownika nie może być pusta</span>
+    </div>
+    <div id="registration-password" class="input-container">
+      <input id="registration-password-text1" type="password" placeholder="Podaj hasło">
+      <input id="registration-password-text2" type="password" placeholder="Potwierdź hasło">
+      <span class="incorrect-input" id="registration-incorrect-password">Nieprawidłowe hasła</span>
+    </div>
+    <button class="big-button" id="registration-submit-button" type="submit">Zarejestruj się</button>
+  </div>
+
+  <div id="reset" class="main-container disabled">
+    <div class="go-back">
+      <div class="go-back-button" id="reset-go-back"><span>&lt; Wróć do logownia</span></div>
+    </div>
+    <span class="main-title">Resetowanie</span>
+    <div id="reset-email" class="input-container">
+      <input id="reset-email-text" placeholder="Podaj Email">
+      <span class="incorrect-input" id="reset-incorrect-mail">Email niepoprawny lub nie jest w użyciu</span>
+    </div>
+    <div id="reset-password" class="input-container">
+      <input id="reset-password-text1" type="password" placeholder="Podaj nowe hasło">
+      <input id="reset-password-text2" type="password" placeholder="Potwierdź nowe hasło">
+      <span class="incorrect-input" id="reset-incorrect-password">Nieprawidłowe hasła</span>
+    </div>
+    <button class="big-button" id="reset-submit-button" type="submit">Zresetuj hasło</button>
+  </div>
+
+  <div id="popup">
+    <span id="popup-text"></span>
+  </div>
+</body>
+</html>
