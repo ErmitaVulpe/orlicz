@@ -109,7 +109,9 @@ window.addEventListener("load", function () {
         } else {
             let splittedEquation = equation.split(eqationSplitRegex);
             if (!splittedEquation[splittedEquation.length - 1]) { splittedEquation = splittedEquation.slice(0, -1) }
-            if (splittedEquation.length % 2 === 0) { equation += m.toString(); }
+            console.log(splittedEquation);
+            if (splittedEquation.length % 2 === 0) {equation += m.toString();
+            } else if (splittedEquation.length === 1) {equation = m.toString()}
             display.updateEquation(equation);
         }
     });
