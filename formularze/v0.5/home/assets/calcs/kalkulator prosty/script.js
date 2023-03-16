@@ -41,7 +41,6 @@ window.addEventListener("load", function () {
 
                 while (splittedEquation.length !== 1) {
                     operationsOrder = (getAllIndexes(splittedEquation, "*").concat(getAllIndexes(splittedEquation, "/"))).sort().concat((getAllIndexes(splittedEquation, "+").concat(getAllIndexes(splittedEquation, "−"))).sort());
-
                     splittedEquation[operationsOrder[0] - 1] = doMath(splittedEquation[operationsOrder[0] - 1], splittedEquation.splice(operationsOrder[0], 1)[0], splittedEquation.splice(operationsOrder[0], 1)[0]);
                     operationsOrder.shift();
                 };
@@ -96,9 +95,12 @@ window.addEventListener("load", function () {
         const history2 = document.getElementById("history-2");
         const history3 = document.getElementById("history-3");
 
+        let parsedEquation = [];
+        passedEquation.split(eqationSplitRegex).forEach((element, index) => {parsedEquation.push(index % 2 === 0 ? parseFloat(element) : element)});
+
         history3.innerText = history2.innerText;
         history2.innerText = history1.innerText;
-        history1.innerText = `${passedEquation.split(eqationSplitRegex).join(" ")} = ${passedOutput}`
+        history1.innerText = `${parsedEquation.join(" ")} = ${passedOutput}`;
     }
 
 
