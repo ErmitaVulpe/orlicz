@@ -95,13 +95,24 @@ TOP BAR
 #profile-container {
     position: absolute;
     right: 1.75vw;
+    display: flex;
+    gap: 0.5vw;
 }
 
+.v-line {
+    height: auto;
+    width: 0.2vh;
+    background-color: #fff;
+}
+
+#profile,
 #logout {
     transition: 0.15s;
     font-size: 1.25vw;
+    cursor: pointer;
 }
 
+#profile:hover,
 #logout:hover {
     transform: scale(1.1);
 }
