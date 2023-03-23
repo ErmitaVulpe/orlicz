@@ -13,6 +13,7 @@ if (email == "") {
 }
 
 window.addEventListener("load", function () {
+    document.getElementById("profile").addEventListener("click", () => {window.location.replace("../profile/index.html")});
     document.getElementById("logout").addEventListener("click", logout);
 
     document.getElementById("title-welcome-text").innerText += ` ${db[email]["username"]}!`;

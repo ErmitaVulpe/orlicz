@@ -122,7 +122,7 @@ window.addEventListener("load", function () {
         if (chk != 0) { return };
         if (!captcha()) { return };
 
-        db[email] = { "password": pass1, "username": username, "favourites": [] }
+        db[email] = { "password": pass1, "username": username, "favourites": [], "data": { "name": "", "lastname": "", "address": "", "pesel": "", "nip": "" } }
         localStorage.setItem("db-users", JSON.stringify(db));
         goToLogin()
         document.getElementById('registration-email-text').value = ""
