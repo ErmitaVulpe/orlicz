@@ -1,210 +1,210 @@
-const questionsDB = {
-    1: {
+const questionsDB = [
+    {
         question: "Ćmielów i Chodzież słyną z produkcji:",
         answers: ["samolotów", "leczniczych wód", "wagonów kolejowych", "porcelany"],
         correct: "porcelany"
     },
-    2: {
+    {
         question: "Czego zakręcane wieczko ma taneczną nazwę?",
         answers: ["szkatułki", "puderniczki", "trumienki", "słoika"],
         correct: "słoika"
     },
-    3: {
+    {
         question: "Do sejmowej zamrażarki trafiają:",
         answers: ["temperamentni posłowie", "skargi na marszałka sejmu", "projekty niektórych ustaw", "nachalni lobbyści"],
         correct: "projekty niektórych ustaw"
     },
-    4: {
+    {
         question: "Szejk pije szejka, czyli co:R",
         answers: ["potrójne espresso", "zieloną herbatę", "napój mleczno-owocowy", "wino gronowe"],
         correct: "napój mleczno-owocowy"
     },
-    5: {
+    {
         question: "Komu w 1917 roku Matka Boska przekazała trzy tajemnice fatimskie?",
         answers: ["skazańcom", "astuszkom", "żołnierzom", "biskupom"],
         correct: "pastuszkom"
     },
-    6: {
+    {
         question: "Czym była zielona książeczka, którą w 2001 roku zastąpiła szaro-różowa karta z poliwęglanu?",
         answers: ["książeczką oszczędnościową", "dowodem osobistym", "prawem jazdy", "książeczką zdrowia"],
         correct: "dowodem osobistym"
     },
-    7: {
+    {
         question: "Jaki ptak ma oczy osadzone frontalnie i otoczone promieniście ułożonymi piórami?",
         answers: ["brzegówka", "dymówka", "płomykówka", "bogatka"],
         correct: "bogatka"
     },
-    8: {
+    {
         question: "Gwiazdy, które tworzą dyszel Wielkiego Wozu, są jednocześnie:",
         answers: ["ogonem Wielkiej Niedźwiedzicy", "kolcem Skorpiona", "szyją żyrafy", "lapą Lwa"],
         correct: "ogonem Wielkiej Niedźwiedzicy"
     },
-    9: {
+    {
         question: "Znajdź błąd.",
         answers: ["handlarz starzyzny", "handlarz narkotyków", "handlarz złotem", "handlarz żywym towarem"],
         correct: "handlarz starzyzny"
     },
-    10: {
+    {
         question: "Tempura to panierowane i smażone na głębokim oleju ryby, krewetki, kalmary, małże. Skąd w XVI wieku przywędrowała do Japonii?",
         answers: ["z Holandii", "z Portugalii", "z Rosji", "z Chin"],
         correct: "z Portugalii"
     },
-    11: {
+    {
         question: "Mistrzami jakiej broni są Atos, Portos i Aramis z książki Aleksandra Dumasa?",
         answers: ["szbli", "szpady", "włóczni", "miecza"],
         correct: "szpady"
     },
-    12: {
+    {
         question: "Corocznie na przełomie marca i kwietnia między osadami uniwersytetów Oxford i Cambridge odbywa się słynny:",
         answers: ["mecz żużlowy", "rajd rowerowy", "wyścig wioślarski", "pojedynek na szpady"],
         correct: "wyścig wioślarski"
     },
-    13: {
+    {
         question: "Manat karaibski, tak jak afrykański, z kończyn ma tylko przednie. A manat azerbejdżański, tak jak turkmeński:",
         answers: ["ma i przednie, i tylne", "zastąpił rubla", "zakrywa całe ciało", "jest samotnikiem"],
         correct: "zastąpił rubla"
     },
-    14: {
+    {
         question: "Pokładne to:",
         answers: ["dawna nazwa nocy poślubnej", "pomost między burtami statków", "pora drzemki", "oplata cmentarna"],
         correct: "oplata cmentarna"
     },
-    15: {
+    {
         question: "Co góral kawaler zdobi piórkiem, a żonaty już nie?",
         answers: ["portki", "kłobuk", "cuchę", "kierpce"],
         correct: "kłobuk"
     },
-    16: {
+    {
         question: "Który kraj w grudniu 2018 roku miał jednego prezydenta, a w styczniu 2019 już dwóch?",
         answers: ["Egipt", "Pakistan", "Wenezuela", "Ukraina"],
         correct: "Wenezuela"
     },
-    17: {
+    {
         question: "Które z wymienionych hodowane są dla cennej skóry, z której produkuje się luksusową galanterię?",
         answers: ["strusie", "perliczki", "gęsi", "indyki"],
         correct: "strusie"
     },
-    18: {
+    {
         question: "Once upon a time... - tak zazwyczaj zaczynają się:",
         answers: ["przesłuchania" ,"testamenty" ,"umowy cywilno-prawne" ,"bajki"],
         correct: "bajki"
     },
-    19: {
+    {
         question: "Jakie elementy garderoby powstają najczęściej z materiału typu softshell?",
         answers: ["rajstopy", "kurtki", "krawaty", "gorsety"],
         correct: "kurtki"
     },
-    20: {
+    {
         question: "W czyim domu nie mówi się o sznurze?",
         answers: ["powroźnika", "powieszonego", "praczki", "linoskoczka"],
         correct: "powieszonego"
     },
-    21: {
+    {
         question: "Różańcową tajemnicą chwalebną nie jest?",
         answers: ["wniebowzięcie Matki Bożej", "zmartwychwstanie Jezusa", "śmierć Jezusa na krzyżu", "zesłanie Ducha Świętego"],
         correct: "śmierć Jezusa na krzyżu"
     },
-    22: {
+    {
         question: "Z gry na jakim instrumencie słynie Czesław Mozil?",
         answers: ["na kornecie", "na akordeonie", "na djembe", "na ksylofonie"],
         correct: "na akordeonie"
     },
-    23: {
+    {
         question: "Ile to jest 1111 razy 1111, jeśli 1 razy 1 to 1, a 11 razy 11 to 121?",
         answers: ["12 321", "1 234 321", "111 111 111", "123 454 321"],
         correct: "1 234 321"
     },
-    24: {
+    {
         question: "Skąd pochodzi Conan Barbarzyńca?",
         answers: ["z Rivii", "z Oz", "z Mordoru", "z Cimmerii"],
         correct: "z Cimmerii"
     },
-    25: {
+    {
         question: "Odrażający drab z Kabaretu Starszych Panów dubeltówkę weźmie, wyjdzie i...:",
         answers: ["rach-ciach!", "buch, buch!", "z rur dwóch", "bum w brzuch"],
         correct: "buch, buch!"
     },
-    26: {
+    {
         question: "Komiksowym „dzieckiem” rysownika Boba Kane’a jest:",
         answers: ["Superman", "Batman", "Spider-Man", "Capłain America"],
         correct: "Batman"
     },
-    27: {
+    {
         question: "Kto jest mistrzem tego samego oręża, w jakim specjalizowała się mitologiczna Artemida?",
         answers: ["Zorro", "Legolas", "Don Kichot", "Longinus Podbipięta"],
         correct: "Legolas"
     },
-    28: {
+    {
         question: "Rybą nie jest:",
         answers: ["świnka", "rozpiór", "krasnopiórka", "kraska"],
         correct: "kraska"
     },
-    29: {
+    {
         question: "Który aktor urodził się w roku opatentowania kinematografu braci Lumière?",
         answers: ["Rudolph Valentino", "Humphrey Bogart", "Charlie Chaplin", "Fred Astaire"],
         correct: "Rudolph Valentino"
     },
-    30: {
+    {
         question: "Mowa w obronie poety Archiasza przeszła do historii jako jeden z najświetniejszych popisów retorycznych:",
         answers: ["Izokratesa", "Cycerona", "Demostenesa", "Kwintyliana"],
         correct: "Cycerona"
     },
-    31: {
+    {
         question: "Kto był nadwornym malarzem króla Filipa IV Habsburga?",
         answers: ["Marcello Bacciarelli", "Jan van Eyck", "Diego Velâzquez", "Jacques-Louis David"],
         correct: "Diego Velâzquez"
     },
-    32: {
+    {
         question: "Likier maraskino produkuje się z maraski, czyli odmiany:",
         answers: ["wiśni", "jabłoni", "figi", "gruszy"],
         correct: "wiśni"
     },
-    33: {
+    {
         question: "Który utwór Juliusza Słowackiego napisany jest prozą?",
         answers: ['"Godzina myśli"', '"W Szwajcarii"', '"Anhelli"', '"Arab"'],
         correct: '"Anhelli"'
     },
-    34: {
+    {
         question: "Płetwą grzbietową nie pruje wody:",
         answers: ["długoszpar", "kosogon", "orka", "wal grenlandzki"],
         correct: "wal grenlandzki"
     },
-    35: {
+    {
         question: '"Wątróbka z cebulką (...) jest zakąską doskonałą. Aby ją przyrządzić, należy kupić samochód i pędzić nim póty, aż się kogoś przejedzie". To Lem i...',
         answers: ['"Solaris"', '"Opowieści o pilocie Pirxie', '"Dykłanda czyli..."', '"Szpital Przemienienia"'],
         correct: '"Dykłanda czyli..."'
     },
-    36: {
+    {
         question: "Ryś polski, łabędź rostowski, saksoński bocian i wywrotek smoleński to:",
         answers: ["rasy gołębi", "rasy kur", "chrząszcze", "akrobacje na deskorolce"],
         correct: "rasy gołębi"
     },
-    37: {
+    {
         question: "Co według Leszka Kołakowskiego jest sklepieniem domu, w którym duch ludzki mieszka?",
         answers: ["Rozum", "Bóg", "Miłość", "Czas"],
         correct: "Czas"
     },
-    38: {
+    {
         question: 'Ikoną czerwcowych wyborów z 1989 r. było zdjęcie z Wałęsą podpisane "Głosuj na…". Kto z tzw. drużyny Lecha go nie miał?',
         answers: ["Jacek Kuroń", "Hanna Suchocka", "Jarosław Kaczyński", "Lech Kaczyński"],
         correct: "Lech Kaczyński"
     },
-    39: {
+    {
         question: "Który instrument stroi muzyk?",
         answers: ["Tamburyn", "Kocioł", "Okarynę", "Czynele"],
         correct: "Kocioł"
     },
-    40: {
+    {
         question: "Który ssak się nie poci?",
         answers: ["owca", "koń", "człowiek", "królik"],
         correct: "królik"
     },
-    41: {
+    {
         question: "Każda barwa składowa światła białego rozchodzi się w ciałach przezroczystych z inną prędkością. Największą prędkość ma:",
         answers: ["czerwona", "pomarańczowa", "żółta", "fioletowa"],
         correct: "czerwona"
     }
-}
+]
 
 
 // : {

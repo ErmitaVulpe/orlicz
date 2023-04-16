@@ -11,10 +11,19 @@ function moveScoreSelector(scoreElementsNumber, event) {
     setTimeout(() => { coolElement.style.transitionDuration = "0s" }, 750);
 }
 
+let questionIsRolling = false;
 function rollQuestion() {
-    
+    if (questionIsRolling) return;
+    questionIsRolling = true;
+    let randomNumber = Math.floor(Math.random() * questionsDB.length);
+    setTimeout(() => {
+        console.log(randomNumber);
+    }, 1000);
+    questionIsRolling = false;
+    console.log(questionIsRolling);
 }
 
 let score = 0;
 window.addEventListener("resize", (event) => { moveScoreSelector(score, event) });
-// document.getElementById("temp-button").addEventListener("click", () => { moveScoreSelector(score) });
+
+document.getElementsByClassName("panel-right")[0].addEventListener("click", rollQuestion)
