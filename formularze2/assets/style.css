@@ -106,7 +106,7 @@ body {
     justify-content: end;
 }
 
-.questions-answear {
+.questions-answer {
     display: grid;
     grid-template-columns: auto auto;
     gap: 0.66vw 0;
@@ -114,11 +114,11 @@ body {
 }
 
 .questions-question::before,
-.questions-answear div::before {
+.questions-answer div::before {
     width: fit-content;
     height: fit-content;
     display: block;
-    content: attr(answear-text);
+    content: attr(answer-text);
     position: absolute;
     z-index: 10;
 }
@@ -127,11 +127,12 @@ body {
     z-index: 10;
     transform: translateY(-0.25vw);
     white-space: pre-line;
-    font-size: 1.5vw;
+    font-size: 1.25vw;
     font-weight: 700;
+    text-align: center;
 }
 
-.questions-answear div::before {
+.questions-answer div::before {
     transform: translate(2.2vw, 0.375vw);
     white-space: nowrap;
     font-size: 1.15vw;
@@ -139,27 +140,27 @@ body {
     pointer-events: none;
 }
 
-.questions-answear-tile {
+.questions-answer-tile {
     width: 100.5%;
     height: fit-content;
     cursor: pointer;
 }
 
-.questions-answear-tile:hover .questions-answear-tile-background {
+.questions-answer-tile:hover .questions-answer-tile-background {
     fill: #3d6eff;
 }
 
-.questions-answear-tile.correct .questions-answear-tile-background {
-    animation-name: questions-answear-tile-correct;
+.questions-answer-tile.correct .questions-answer-tile-background {
+    animation-name: questions-answer-tile-correct;
     animation-duration: 3s;
     fill: #33cc33;
 }
 
-.questions-answear-tile.correct:hover .questions-answear-tile-background {
+.questions-answer-tile.correct:hover .questions-answer-tile-background {
     fill: #1be61b;
 }
 
-@keyframes questions-answear-tile-correct {
+@keyframes questions-answer-tile-correct {
     0% { fill: #e19c15; }
     74% { fill: #e19c15; }
     82% { fill: #86b525; }
@@ -168,17 +169,17 @@ body {
     100% { fill: #33cc33; }
 }
 
-.questions-answear-tile.incorrect .questions-answear-tile-background {
-    animation-name: questions-answear-tile-incorrect;
+.questions-answer-tile.incorrect .questions-answer-tile-background {
+    animation-name: questions-answer-tile-incorrect;
     animation-duration: 3s;
     fill: #c02121;
 }
 
-.questions-answear-tile.incorrect:hover .questions-answear-tile-background {
+.questions-answer-tile.incorrect:hover .questions-answer-tile-background {
     fill: #e60f0f;
 }
 
-@keyframes questions-answear-tile-incorrect {
+@keyframes questions-answer-tile-incorrect {
     0% { fill: #e19c15; }
     74% { fill: #e19c15; }
     82% { fill: #d67219; }

@@ -25,7 +25,7 @@ const questionsDB = [
         correct: "pastuszkom"
     },
     {
-        question: "Czym była zielona książeczka, którą w 2001 roku zastąpiła szaro-różowa karta z poliwęglanu?",
+        question: "Czym była zielona książeczka, którą w 2001 roku zastąpiła\nszaro-różowa karta z poliwęglanu?",
         answers: ["książeczką oszczędnościową", "dowodem osobistym", "prawem jazdy", "książeczką zdrowia"],
         correct: "dowodem osobistym"
     },
@@ -50,7 +50,7 @@ const questionsDB = [
         correct: "z Portugalii"
     },
     {
-        question: "Mistrzami jakiej broni są Atos, Portos i Aramis z książki Aleksandra Dumasa?",
+        question: "Mistrzami jakiej broni są Atos, Portos i Aramis\nz książki Aleksandra Dumasa?",
         answers: ["szbli", "szpady", "włóczni", "miecza"],
         correct: "szpady"
     },
@@ -75,12 +75,12 @@ const questionsDB = [
         correct: "kłobuk"
     },
     {
-        question: "Który kraj w grudniu 2018 roku miał jednego prezydenta, a w styczniu 2019 już dwóch?",
+        question: "Który kraj w grudniu 2018 roku miał jednego prezydenta,\na w styczniu 2019 już dwóch?",
         answers: ["Egipt", "Pakistan", "Wenezuela", "Ukraina"],
         correct: "Wenezuela"
     },
     {
-        question: "Które z wymienionych hodowane są dla cennej skóry, z której produkuje się luksusową galanterię?",
+        question: "Które z wymienionych hodowane są dla cennej skóry, z której\nprodukuje się luksusową galanterię?",
         answers: ["strusie", "perliczki", "gęsi", "indyki"],
         correct: "strusie"
     },
@@ -180,12 +180,12 @@ const questionsDB = [
         correct: "rasy gołębi"
     },
     {
-        question: "Co według Leszka Kołakowskiego jest sklepieniem domu, w którym duch ludzki mieszka?",
+        question: "Co według Leszka Kołakowskiego jest sklepieniem domu,\nw którym duch ludzki mieszka?",
         answers: ["Rozum", "Bóg", "Miłość", "Czas"],
         correct: "Czas"
     },
     {
-        question: 'Ikoną czerwcowych wyborów z 1989 r. było zdjęcie z Wałęsą podpisane "Głosuj na…". Kto z tzw. drużyny Lecha go nie miał?',
+        question: 'Ikoną czerwcowych wyborów z 1989 r. było zdjęcie z Wałęsą podpisane\n"Głosuj na…". Kto z tzw. drużyny Lecha go nie miał?',
         answers: ["Jacek Kuroń", "Hanna Suchocka", "Jarosław Kaczyński", "Lech Kaczyński"],
         correct: "Lech Kaczyński"
     },
@@ -200,7 +200,7 @@ const questionsDB = [
         correct: "królik"
     },
     {
-        question: "Każda barwa składowa światła białego rozchodzi się w ciałach przezroczystych z inną prędkością. Największą prędkość ma:",
+        question: "Każda barwa składowa światła białego rozchodzi się w ciałach/nprzezroczystych z inną prędkością. Największą prędkość ma:",
         answers: ["czerwona", "pomarańczowa", "żółta", "fioletowa"],
         correct: "czerwona"
     }

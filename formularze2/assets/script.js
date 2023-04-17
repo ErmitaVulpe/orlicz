@@ -11,16 +11,54 @@ function moveScoreSelector(scoreElementsNumber, event) {
     setTimeout(() => { coolElement.style.transitionDuration = "0s" }, 750);
 }
 
+const answerElementsArray = [];
+for (let i = 0; i < 4; i++) { answerElementsArray.push(document.getElementById(`answer-${i + 1}`)) };
+
 let questionIsRolling = false;
+/**
+ * @param none put your dick here please
+ * 
+ * Function creates HTML divs with randomly chosen questions from database
+ */
 function rollQuestion() {
     if (questionIsRolling) return;
+    function shuffle(array) {
+        for (let i = 0; i < array.length; i++) {
+            let currentIndex = array.length, randomIndex;
+    
+            while (currentIndex != 0) {
+                randomIndex = Math.floor(Math.random() * currentIndex);
+                currentIndex--;
+    
+                [array[currentIndex], array[randomIndex]] = [
+                    array[randomIndex], array[currentIndex]];
+            }
+        }
+        return array;
+    }
+
     questionIsRolling = true;
-    let randomNumber = Math.floor(Math.random() * questionsDB.length);
+    currentQuestion = questionsDB[Math.floor(Math.random() * questionsDB.length)];
+    currentQuestion["answers"] = shuffle(currentQuestion["answers"]);
+
+    const question = document.getElementById("question");
+    question.setAttribute("answer-text", "");
+    answerElementsArray.forEach(element => { element.setAttribute("answer-text", "") });
+    
+    const answersPrefixes = ["A: ", "B: ", "C: ", "D: "];
+    var answersIterator = 0;
+    function renderanswers(array) {
+        setTimeout(() => {
+            answerElementsArray[answersIterator].setAttribute("answer-text", `${answersPrefixes[answersIterator]}${array[answersIterator]}`);
+            answersIterator++;
+            if (answersIterator < array.length) { renderanswers(array) } else questionIsRolling = false;
+        }, 750)
+    }
+    
     setTimeout(() => {
-        console.log(randomNumber);
-    }, 1000);
-    questionIsRolling = false;
-    console.log(questionIsRolling);
+        document.getElementById("question").setAttribute("answer-text", currentQuestion["question"]);
+        renderanswers(currentQuestion["answers"]);
+    }, 750);
 }
 
 let score = 0;
