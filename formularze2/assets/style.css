@@ -238,22 +238,20 @@ body {
 }
 
 .score-selector-wrapper {
-    position: absolute;
-    width: 66.6%;
-    top: 100%;
-    overflow: hidden;
+    position: fixed;
+    width: 30vw;
+    top: 110%;
 }
 
 .score-selector {
-    height: 0;
+    height: fit-content;
     display: flex;
     justify-content: center;
-    align-items: start;
+    align-items: center;
     width: 100%;
-    position: relative;
+    transform: translateY(-50%);
 }
 
 .score-selector img {
-    position: absolute;
-    width: 130%;
+    width: 100%;
 }

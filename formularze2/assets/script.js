@@ -1,20 +1,37 @@
 const usedQuestionsIndexes = [];
 let currentQuestion;
+let score;
+const answerElementsArray = [];
+for (let i = 0; i < 4; i++) { answerElementsArray.push(document.getElementById(`answer-${i + 1}`)) };
+let questionIsRolling = false;
 
+/**
+ * @param int score to which score selector is supposed to move
+ * @param bool defines if transition should be animatedd
+ */
 function moveScoreSelector(scoreElementsNumber, event) {
-    if (!scoreElementsNumber) { return }
+    if (!scoreElementsNumber) return hideScoreSelector();
+
     const coolElement = document.getElementById("score-selector-wrapper");
-    if (!event) {
-        coolElement.style.overflow = "visible"
-        coolElement.style.transitionDuration = "0.75s"};
-    coolElement.style.top = `${document.getElementById(`score-element-${scoreElementsNumber}`).getBoundingClientRect().top / innerHeight * 100}%`
+    if (!event) coolElement.style.transitionDuration = "0.75s";
+
+    coolElement.style.top = `${(document.getElementById(`score-element-${scoreElementsNumber}`).getBoundingClientRect().top + (document.getElementById(`score-element-${scoreElementsNumber}`).getBoundingClientRect().height / 2)) / innerHeight * 100}%`
     setTimeout(() => { coolElement.style.transitionDuration = "0s" }, 750);
 }
 
-const answerElementsArray = [];
-for (let i = 0; i < 4; i++) { answerElementsArray.push(document.getElementById(`answer-${i + 1}`)) };
+/**
+ * Moves scoreselector to it's original (hidden) position
+ * @param none 
+ */
+function hideScoreSelector() {
+    const coolElement = document.getElementById("score-selector-wrapper");
+    coolElement.style.transitionDuration = "0.75s";
+    coolElement.style.top = "110%";
+    setTimeout(() => {
+        coolElement.style.transitionDuration = "0s"
+    }, 750);
+}
 
-let questionIsRolling = false;
 /**
  * @param none put your dick here please
  * 
@@ -58,10 +75,21 @@ function rollQuestion() {
     setTimeout(() => {
         document.getElementById("question").setAttribute("answer-text", currentQuestion["question"]);
         renderanswers(currentQuestion["answers"]);
-    }, 750);
+    }, 1000);
 }
 
-let score = 0;
+/**
+ * @param none
+ * starts and resets game
+ */
+function startGame() {
+    score = 0;
+    hideScoreSelector();
+    rollQuestion();
+}
+
 window.addEventListener("resize", (event) => { moveScoreSelector(score, event) });
 
-document.getElementsByClassName("panel-right")[0].addEventListener("click", rollQuestion)
+// document.getElementsByClassName("panel-right")[0].addEventListener("click", rollQuestion);
+
+startGame();

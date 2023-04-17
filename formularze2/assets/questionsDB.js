@@ -15,7 +15,7 @@ const questionsDB = [
         correct: "projekty niektórych ustaw"
     },
     {
-        question: "Szejk pije szejka, czyli co:R",
+        question: "Szejk pije szejka, czyli co:",
         answers: ["potrójne espresso", "zieloną herbatę", "napój mleczno-owocowy", "wino gronowe"],
         correct: "napój mleczno-owocowy"
     },
@@ -45,7 +45,7 @@ const questionsDB = [
         correct: "handlarz starzyzny"
     },
     {
-        question: "Tempura to panierowane i smażone na głębokim oleju ryby, krewetki, kalmary, małże. Skąd w XVI wieku przywędrowała do Japonii?",
+        question: "Tempura to panierowane i smażone na głębokim oleju ryby, krewetki,\nkalmary, małże. Skąd w XVI wieku przywędrowała do Japonii?",
         answers: ["z Holandii", "z Portugalii", "z Rosji", "z Chin"],
         correct: "z Portugalii"
     },
@@ -90,7 +90,7 @@ const questionsDB = [
         correct: "bajki"
     },
     {
-        question: "Jakie elementy garderoby powstają najczęściej z materiału typu softshell?",
+        question: "Jakie elementy garderoby powstają najczęściej\nz materiału typu softshell?",
         answers: ["rajstopy", "kurtki", "krawaty", "gorsety"],
         correct: "kurtki"
     },
@@ -120,7 +120,7 @@ const questionsDB = [
         correct: "z Cimmerii"
     },
     {
-        question: "Odrażający drab z Kabaretu Starszych Panów dubeltówkę weźmie, wyjdzie i...:",
+        question: "Odrażający drab z Kabaretu Starszych Panów\ndubeltówkę weźmie, wyjdzie i...:",
         answers: ["rach-ciach!", "buch, buch!", "z rur dwóch", "bum w brzuch"],
         correct: "buch, buch!"
     },
@@ -130,7 +130,7 @@ const questionsDB = [
         correct: "Batman"
     },
     {
-        question: "Kto jest mistrzem tego samego oręża, w jakim specjalizowała się mitologiczna Artemida?",
+        question: "Kto jest mistrzem tego samego oręża, w jakim\nspecjalizowała się mitologiczna Artemida?",
         answers: ["Zorro", "Legolas", "Don Kichot", "Longinus Podbipięta"],
         correct: "Legolas"
     },
