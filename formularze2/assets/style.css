@@ -146,17 +146,17 @@ body {
     cursor: pointer;
 }
 
-.questions-answer-tile:hover .questions-answer-tile-background {
+.questions-answer div:hover .questions-answer-tile-background {
     fill: #3d6eff;
 }
 
-.questions-answer-tile.correct .questions-answer-tile-background {
+.questions-answer div.correct .questions-answer-tile-background {
     animation-name: questions-answer-tile-correct;
     animation-duration: 3s;
     fill: #33cc33;
 }
 
-.questions-answer-tile.correct:hover .questions-answer-tile-background {
+.questions-answer div.correct:hover .questions-answer-tile-background {
     fill: #1be61b;
 }
 
@@ -169,13 +169,13 @@ body {
     100% { fill: #33cc33; }
 }
 
-.questions-answer-tile.incorrect .questions-answer-tile-background {
+.questions-answer div.incorrect .questions-answer-tile-background {
     animation-name: questions-answer-tile-incorrect;
     animation-duration: 3s;
     fill: #c02121;
 }
 
-.questions-answer-tile.incorrect:hover .questions-answer-tile-background {
+.questions-answer div.incorrect:hover .questions-answer-tile-background {
     fill: #e60f0f;
 }
 
@@ -254,4 +254,15 @@ body {
 
 .score-selector img {
     width: 100%;
+}
+
+.overlay-page.active {
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    left: 0;
+}
+
+.overlay-page.active {
+    top: 0;
 }

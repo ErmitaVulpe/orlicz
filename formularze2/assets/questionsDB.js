@@ -171,8 +171,8 @@ const questionsDB = [
     },
     {
         question: '"Wątróbka z cebulką (...) jest zakąską doskonałą. Aby ją przyrządzić, należy kupić samochód i pędzić nim póty, aż się kogoś przejedzie". To Lem i...',
-        answers: ['"Solaris"', '"Opowieści o pilocie Pirxie', '"Dykłanda czyli..."', '"Szpital Przemienienia"'],
-        correct: '"Dykłanda czyli..."'
+        answers: ['"Solaris"', '"Opowieści o pilocie Pirxie', '"Dyktanda czyli..."', '"Szpital Przemienienia"'],
+        correct: '"Dyktanda czyli..."'
     },
     {
         question: "Ryś polski, łabędź rostowski, saksoński bocian i wywrotek smoleński to:",
@@ -200,7 +200,7 @@ const questionsDB = [
         correct: "królik"
     },
     {
-        question: "Każda barwa składowa światła białego rozchodzi się w ciałach/nprzezroczystych z inną prędkością. Największą prędkość ma:",
+        question: "Każda barwa składowa światła białego rozchodzi się w ciałach\nprzezroczystych z inną prędkością. Największą prędkość ma:",
         answers: ["czerwona", "pomarańczowa", "żółta", "fioletowa"],
         correct: "czerwona"
     }

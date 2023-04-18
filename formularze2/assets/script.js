@@ -3,7 +3,8 @@ let currentQuestion;
 let score;
 const answerElementsArray = [];
 for (let i = 0; i < 4; i++) { answerElementsArray.push(document.getElementById(`answer-${i + 1}`)) };
-let questionIsRolling = false;
+let isQuestionAnimationRolling = false;
+let answerWasPressed = false;
 
 /**
  * @param int score to which score selector is supposed to move
@@ -38,7 +39,7 @@ function hideScoreSelector() {
  * Function creates HTML divs with randomly chosen questions from database
  */
 function rollQuestion() {
-    if (questionIsRolling) return;
+    if (isQuestionAnimationRolling) return;
     function shuffle(array) {
         for (let i = 0; i < array.length; i++) {
             let currentIndex = array.length, randomIndex;
@@ -54,8 +55,13 @@ function rollQuestion() {
         return array;
     }
 
-    questionIsRolling = true;
-    currentQuestion = questionsDB[Math.floor(Math.random() * questionsDB.length)];
+    isQuestionAnimationRolling = true;
+    let randomNumber = Math.floor(Math.random() * questionsDB.length);
+    while (usedQuestionsIndexes.includes(randomNumber)) {
+        randomNumber = Math.floor(Math.random() * questionsDB.length);
+    }
+    usedQuestionsIndexes.push(randomNumber);
+    currentQuestion = questionsDB[randomNumber];
     currentQuestion["answers"] = shuffle(currentQuestion["answers"]);
 
     const question = document.getElementById("question");
@@ -68,14 +74,47 @@ function rollQuestion() {
         setTimeout(() => {
             answerElementsArray[answersIterator].setAttribute("answer-text", `${answersPrefixes[answersIterator]}${array[answersIterator]}`);
             answersIterator++;
-            if (answersIterator < array.length) { renderanswers(array) } else questionIsRolling = false;
+            if (answersIterator < array.length) { renderanswers(array) } else isQuestionAnimationRolling = false;
         }, 750)
     }
     
     setTimeout(() => {
         document.getElementById("question").setAttribute("answer-text", currentQuestion["question"]);
         renderanswers(currentQuestion["answers"]);
-    }, 1000);
+    }, 1500);
+}
+
+/**
+ * Takes answer element that got pressed and returns if the answer was correct
+ * @param DOM_Element
+ */
+function checkAnswers(answerElement) {
+    if (isQuestionAnimationRolling || answerWasPressed) return;
+    isQuestionAnimationRolling = answerWasPressed = true;
+    let wasAnswerCorrect = answerElement.getAttribute("answer-text").replace(/[A-D]: /, "") === currentQuestion["correct"]
+
+    if (wasAnswerCorrect) {
+        answerElement.classList.add("correct");
+        score++;
+    } else {
+        answerElement.classList.add("incorrect");
+    }
+
+    setTimeout(() => {
+        isQuestionAnimationRolling = false;
+        if (wasAnswerCorrect) {
+            if (score === 13) return gameWon();
+
+            moveScoreSelector(score);
+            setTimeout(() => {
+                answerElement.classList.remove("correct");
+                answerWasPressed = false;
+                rollQuestion();
+            }, 1750)
+        } else {
+            gameOver();
+        }
+    }, 3500)
 }
 
 /**
@@ -84,11 +123,24 @@ function rollQuestion() {
  */
 function startGame() {
     score = 0;
-    hideScoreSelector();
+    moveScoreSelector(score);
     rollQuestion();
 }
 
+/**
+ * @param none
+ * ends the game
+ * displays the game over message
+ */
+function gameOver() {
+    console.log("Game Over");
+}
+
 window.addEventListener("resize", (event) => { moveScoreSelector(score, event) });
+
+answerElementsArray.forEach(element => {
+    element.addEventListener("click", () => {checkAnswers(element)});
+});
 
 // document.getElementsByClassName("panel-right")[0].addEventListener("click", rollQuestion);
 
