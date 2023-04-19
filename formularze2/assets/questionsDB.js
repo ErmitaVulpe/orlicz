@@ -203,7 +203,12 @@ const questionsDB = [
         question: "Każda barwa składowa światła białego rozchodzi się w ciałach\nprzezroczystych z inną prędkością. Największą prędkość ma:",
         answers: ["czerwona", "pomarańczowa", "żółta", "fioletowa"],
         correct: "czerwona"
-    }
+    },
+    {
+        question: "Komu pośmiertnie został odebrany order virtutti militari",
+        answers: ["Józef Pisudski", "Konstatnty Rokosowski", "Stanisław Poniatowki", "Lenid Breżeniew"],
+        correct: "Lenid Breżeniew"
+    },
 ]
 
 

@@ -256,13 +256,109 @@ body {
     width: 100%;
 }
 
-.overlay-page.active {
-    position: absolute;
+.overlay-page {
+    position: fixed;
     width: 100vw;
     height: 100vh;
     left: 0;
+    top: 100%;
+    /* transition: 0.75s; */
+    z-index: 10000;
 }
 
 .overlay-page.active {
     top: 0;
+}
+
+.overlay-page-content {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.overlay-page-content > div {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.start-game-page {
+    background-color: #2b399d;
+}
+
+.start-game-page-backround-wrapper {
+    position: relative;
+}
+
+.start-game-page-backround-img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 50%;
+    height: fit-content;
+}
+
+.start-game-page-backround-img img {
+    width: 100%;
+}
+
+.start-game-page-backround-blur {
+    backdrop-filter: blur(0.3vw);
+    height: 100%;
+    width: 100%;
+}
+
+.start-game-page-button {
+    position: absolute;
+    top: 63%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 57vw;
+    height: fit-content;
+    cursor: pointer;
+}
+
+.start-game-page-button:hover .start-game-page-button-background {
+    fill: #3d6eff;
+}
+
+.start-game-page-button-container::before {
+    content: "Wejdź do gry";
+    display: block;
+    position: absolute;
+    top: 63%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+    pointer-events: none;
+    font-size: 2.5vw;
+    font-weight: 700;
+}
+
+.end-game-page {
+    backdrop-filter: blur(1.25vw);
+    display: grid;
+    grid-template-columns: 25vw 50vw auto;
+    grid-template-rows: 60vh auto;
+    /* justify-content: center; */
+}
+
+.end-game-page > div {
+    margin: 0 auto;
+}
+
+.end-game-page-message {
+    grid-column: 1 / span 3;
+    font-size: 9vw;
+    display: grid;
+    align-items: center;
+    text-shadow: -0.2vw -0.2vw 0 #000, 0.2vw -0.2vw 0 #000, -0.2vw 0.2vw 0 #000, 0.2vw 0.2vw 0 #000;
+}
+
+.end-game-page-button-svg {
+    width: 100%;
+    scale: 1.25;
 }

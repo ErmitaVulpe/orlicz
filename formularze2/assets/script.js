@@ -103,9 +103,9 @@ function checkAnswers(answerElement) {
     setTimeout(() => {
         isQuestionAnimationRolling = false;
         if (wasAnswerCorrect) {
-            if (score === 13) return gameWon();
-
             moveScoreSelector(score);
+            if (score === 12) return gameWon();
+
             setTimeout(() => {
                 answerElement.classList.remove("correct");
                 answerWasPressed = false;
@@ -136,6 +136,15 @@ function gameOver() {
     console.log("Game Over");
 }
 
+/**
+ * @param none
+ * ends the game
+ * displays the game won message
+ */
+function gameWon() {
+    console.log("Game won");
+}
+
 window.addEventListener("resize", (event) => { moveScoreSelector(score, event) });
 
 answerElementsArray.forEach(element => {
@@ -144,4 +153,9 @@ answerElementsArray.forEach(element => {
 
 // document.getElementsByClassName("panel-right")[0].addEventListener("click", rollQuestion);
 
-startGame();
+document.getElementById("start-game-page-button").addEventListener("click", () => {
+    const startGamePageElement = document.getElementById("start-game-page");
+    startGamePageElement.style.transition = "0.75s"
+    startGamePageElement.classList.remove("active");
+    setTimeout(startGame, 750)
+})
