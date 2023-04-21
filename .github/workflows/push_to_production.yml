@@ -1,0 +1,8 @@
+name: GitHub Actions Demo
+run-name: ${{ github.actor }} is testing out GitHub Actions 🚀
+on: [push]
+jobs:
+  push_to_production:
+    runs-on: ubuntu@tymon.wilczek.dev
+    steps:
+      - run: git -C /var/www/tymon.wilczek.dev/szkola pull
