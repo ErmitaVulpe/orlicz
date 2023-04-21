@@ -1,5 +1,4 @@
-name: GitHub Actions Demo
-run-name: ${{ github.actor }} is testing out GitHub Actions 🚀
+name: push_to_production
 on:
   pull_request:
     types: [closed]
@@ -7,4 +6,4 @@ jobs:
   push_to_production:
     runs-on: self-hosted
     steps:
-      - run: git -C /var/www/tymon.wilczek.dev/szkola pull
+      - run: ${{ PUSH_PRODUCTION_COMMAND }}
