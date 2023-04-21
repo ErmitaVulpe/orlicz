@@ -6,4 +6,4 @@ jobs:
   push_to_production:
     runs-on: self-hosted
     steps:
-      - run: ${{ variables.PUSH_PRODUCTION_COMMAND }}
+      - run: ${{ secrets.PUSH_PRODUCTION_COMMAND }}
