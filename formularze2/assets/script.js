@@ -122,7 +122,7 @@ function checkAnswers(answerElement) {
  * starts and resets game
  */
 function startGame() {
-    score = 11;
+    score = 0;
     isQuestionAnimationRolling = false;
     answerWasPressed = false;
     usedQuestionsIndexes.length = 0;

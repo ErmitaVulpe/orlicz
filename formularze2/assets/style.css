@@ -423,11 +423,6 @@ body {
     height: fit-content;
 }
 
-
-
-
-
-
 .won-game-page-textbox {
     display: grid;
     grid-template-columns: auto auto;
