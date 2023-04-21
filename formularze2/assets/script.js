@@ -5,6 +5,7 @@ const answerElementsArray = [];
 for (let i = 0; i < 4; i++) { answerElementsArray.push(document.getElementById(`answer-${i + 1}`)) };
 let isQuestionAnimationRolling = false;
 let answerWasPressed = false;
+const answersPrefixes = ["A: ", "B: ", "C: ", "D: "];
 
 /**
  * @param int score to which score selector is supposed to move
@@ -68,7 +69,6 @@ function rollQuestion() {
     question.setAttribute("answer-text", "");
     answerElementsArray.forEach(element => { element.setAttribute("answer-text", "") });
     
-    const answersPrefixes = ["A: ", "B: ", "C: ", "D: "];
     var answersIterator = 0;
     function renderanswers(array) {
         setTimeout(() => {
@@ -122,8 +122,14 @@ function checkAnswers(answerElement) {
  * starts and resets game
  */
 function startGame() {
-    score = 0;
+    score = 11;
+    isQuestionAnimationRolling = false;
+    answerWasPressed = false;
+    usedQuestionsIndexes.length = 0;
     moveScoreSelector(score);
+    document.querySelector(".questions-answer").querySelectorAll("div").forEach(element => {
+        element.classList.remove("incorrect");
+    });
     rollQuestion();
 }
 
@@ -133,7 +139,14 @@ function startGame() {
  * displays the game over message
  */
 function gameOver() {
-    console.log("Game Over");
+    const endGamePageElement = document.getElementById("end-game-page");
+    endGamePageElement.style.transition = "0.75s";
+    endGamePageElement.classList.add("active");
+
+    document.querySelector("#end-game-page-message-correct-answer").innerText = `${answersPrefixes[currentQuestion["answers"].indexOf(currentQuestion["correct"])]}${currentQuestion["correct"]}`;
+    document.querySelector("#end-game-page-score").innerText = score;
+    document.querySelector("#end-game-page-won").innerText = (document.querySelector(`#score-element-${score}`) === null ? "0 zł" : document.querySelector(`#score-element-${score}`).querySelector(".score-element-text-value").innerText);
+    setTimeout(() => {endGamePageElement.style.transition = "0s"}, 750);
 }
 
 /**
@@ -142,7 +155,12 @@ function gameOver() {
  * displays the game won message
  */
 function gameWon() {
-    console.log("Game won");
+    setTimeout(() => {
+        const endGamePageElement = document.getElementById("won-game-page");
+        endGamePageElement.style.transition = "0.75s";
+        endGamePageElement.classList.add("active");
+        setTimeout(() => {endGamePageElement.style.transition = "0s"}, 750);
+    }, 1500);
 }
 
 window.addEventListener("resize", (event) => { moveScoreSelector(score, event) });
@@ -157,5 +175,12 @@ document.getElementById("start-game-page-button").addEventListener("click", () =
     const startGamePageElement = document.getElementById("start-game-page");
     startGamePageElement.style.transition = "0.75s"
     startGamePageElement.classList.remove("active");
+    setTimeout(startGame, 750)
+})
+
+document.querySelector(".end-game-page-button").addEventListener("click", () => {
+    const endGamePageElement = document.getElementById("end-game-page");
+    endGamePageElement.style.transition = "0.75s"
+    endGamePageElement.classList.remove("active");
     setTimeout(startGame, 750)
 })

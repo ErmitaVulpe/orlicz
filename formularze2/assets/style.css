@@ -264,6 +264,7 @@ body {
     top: 100%;
     /* transition: 0.75s; */
     z-index: 10000;
+    overflow: hidden;
 }
 
 .overlay-page.active {
@@ -352,13 +353,134 @@ body {
 
 .end-game-page-message {
     grid-column: 1 / span 3;
+    display: grid;
+    grid-template-rows: 60% auto;
+    justify-items: center;
+}
+
+.end-game-page-message > span {
+    text-shadow: -0.2vw -0.2vw 0 #000, 0.2vw -0.2vw 0 #000, -0.2vw 0.2vw 0 #000, 0.2vw 0.2vw 0 #000;
     font-size: 9vw;
+}
+
+.end-game-page-message-correct-answer-container {
+    font-size: 2vw;
+    text-align: center;
+}
+
+.end-game-page-button {
+    width: 100%;
+    height: fit-content;
+    margin-bottom: 1vw;
     display: grid;
     align-items: center;
-    text-shadow: -0.2vw -0.2vw 0 #000, 0.2vw -0.2vw 0 #000, -0.2vw 0.2vw 0 #000, 0.2vw 0.2vw 0 #000;
+    justify-content: center;
+    display: flex;
+    cursor: pointer;
+    flex-direction: row;
+}
+
+.end-game-page-button::before {
+    content: "Zagraj ponownie";
+    width: fit-content;
+    height: fit-content;
+    display: block;
+    position: absolute;
+    z-index: 10;
+    font-size: 2vw;
+    transform: translateY(-10%);
+    pointer-events: none;
 }
 
 .end-game-page-button-svg {
     width: 100%;
-    scale: 1.25;
+}
+
+.end-game-page-button-svg:hover .end-game-page-button-background {
+    fill: #3d6eff;
+}
+
+.end-game-page-score,
+.end-game-page-won {
+    text-align: center;
+    font-size: 2vw;
+}
+
+.won-game-page {
+    background-color: #2b399d;
+}
+
+.won-game-page-backround-img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 66.6vw;
+}
+
+.won-game-page-backround-img img {
+    width: 100%;
+    height: fit-content;
+}
+
+
+
+
+
+
+.won-game-page-textbox {
+    display: grid;
+    grid-template-columns: auto auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 200vw;
+    height: 15vw;
+}
+
+.won-game-page-textbox .won-game-page-textbox-inner {
+    width: 100%;
+    height: 100%;
+    font-size: 6vw;
+    font-family: sans-serif;
+    font-weight: bold;
+    white-space: nowrap;
+    overflow: hidden;
+    display: grid;
+    align-items: center;
+}
+
+.won-game-page-textbox .won-game-page-textbox-inner:first-child {
+    background-color: lightcoral;
+    color: antiquewhite;
+    transform-origin: right;
+    transform: perspective(5vw) rotateY(-4deg);
+}
+
+.won-game-page-textbox .won-game-page-textbox-inner:last-child {
+    background-color: indianred;
+    color: darkred;
+    transform-origin: left;
+    transform: perspective(5vw) rotateY(4deg);
+}
+
+.won-game-page-textbox .won-game-page-textbox-inner span {
+    position: relative;
+    animation: marquee 7.5s linear infinite;
+}
+
+.won-game-page-textbox .won-game-page-textbox-inner:first-child span {
+    animation-delay: 3.75s;
+    left: -100%;
+}
+
+@keyframes marquee {
+    from {
+        left: 100%;
+    }
+
+    to {
+        left: -100%;
+    }
 }

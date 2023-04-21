@@ -238,9 +238,12 @@
       </div>
     </div>
   </div>
-  <div class="overlay-page end-game-page active" id="end-game-page">
-    <div class="end-game-page-message"><span>Przegrana</span></div>
-    <div class="end-game-page-score">Poprawne odpowiedzi<br><span class="end-game-page-score">1</span> / 12<br>pytań</div>
+  <div class="overlay-page end-game-page" id="end-game-page">
+    <div class="end-game-page-message">
+      <span>Przegrana</span>
+      <div class="end-game-page-message-correct-answer-container">Poprawna odpowiedź to:<br><span id="end-game-page-message-correct-answer"></span></div>
+    </div>
+    <div class="end-game-page-score">Poprawne odpowiedzi<br><span id="end-game-page-score"></span> / 12 pytań</div>
     <div class="end-game-page-button">
       <svg class="end-game-page-button-svg" id="end-game-page-button" width="887" height="92" viewBox="0 0 887 92" fill="none"
         xmlns="http://www.w3.org/2000/svg">
@@ -268,7 +271,18 @@
         </defs>
       </svg>
     </div>
-    <div class="end-game-page-won">Wygrana<br><span class="end-game-page-won"></span></div>
+    <div class="end-game-page-won">Wygrana<br><span id="end-game-page-won"></span></div>
+  </div>
+  <div class="overlay-page won-game-page" id="won-game-page">
+    <div class="won-game-page-backround-img"><img src="assets/img/milionerzy_logo.webp"></div>
+    <div class="won-game-page-textbox">
+      <div class="won-game-page-textbox-inner">
+        <span>Gratulacje! Wygrałeś 1 000 000 zł!</span>
+      </div>
+      <div class="won-game-page-textbox-inner">
+        <span>Gratulacje! Wygrałeś 1 000 000 zł!</span>
+      </div>
+    </div>
   </div>
 <script src="assets/script.js"></script>
 </body>
