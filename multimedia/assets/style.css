@@ -1,0 +1,101 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap');
+
+:root {
+    --theme-dark: #131516;
+    --theme-grey: #242829;
+    --theme-ligth-grey: #646d74;
+    --theme-washed-white: #b9bab2;
+    --font-size-very-big: 2.25vw;
+    --font-size-big: 2vw;
+    --font-size-medium: 1.6vw;
+    --font-size-normal: 1.25vw;
+    --font-size-small: 1vw;
+    --main-container-offset: 2%;
+    --main-container-gap: 0.15em;
+    --main-container-width: 60%;
+    --navigation-panel-width: 20%;
+}
+
+::-webkit-scrollbar {
+    width: min(0.8vw, 16px);
+}
+
+::-webkit-scrollbar-track {
+    background: #202324;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #575e62;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #767d81;
+}
+
+html {
+    scroll-behavior: smooth !important;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    margin: 0;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    color: var(--theme-washed-white);
+    font-size: var(--font-size-small);
+    width: 100vw;
+    height: 100vh;
+    background-color: var(--theme-dark);
+    overflow-x: hidden;
+}
+
+.horizontal-line {
+    height: min(4px, 0.25vw);
+    background-color: var(--theme-grey);
+    border-radius: 20vw;
+    margin: 0.8vw 0;
+}
+
+.main-container {
+    position: absolute;
+    top: 0;
+    left: calc(50% + var(--main-container-offset));
+    transform: translateX(-50%);
+    width: var(--main-container-width);
+    display: flex;
+    gap: var(--main-container-gap);
+    background-color: var(--theme-ligth-grey);
+}
+
+.main-container > div{
+    background-color: var(--theme-dark);
+}
+
+.left-navigation-panel {
+    width: var(--navigation-panel-width);
+}
+
+.left-navigation-panel-sticky-container {
+    height: fit-content;
+    position: sticky;
+    top: 0;
+}
+
+.main {
+    width: calc(100% - var(--navigation-panel-width) - var(--main-container-gap));
+    padding: 0.75em 1em;
+}
+
+.main-header-cool-big-title {
+    font-size: var(--font-size-very-big);
+}
+
+.main-header-cool-small-title {
+    font-size: var(--font-size-normal);
+}
+
+.big-segment-title {
+    font-size: var(--font-size-big);
+}
