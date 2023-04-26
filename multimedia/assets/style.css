@@ -99,3 +99,43 @@ body {
 .big-segment-title {
     font-size: var(--font-size-big);
 }
+
+.text {
+    font-size: var(--font-size-small);
+    padding: 0.33vw 0;
+    text-align: justify;
+}
+
+.mid-segment {
+    margin-left: 1.75vw;
+    padding: 0.6em 1em;
+    display: flex;
+    flex-direction: column;
+    gap: 0.2vw;
+}
+
+.mid-segment-title {
+    font-size: var(--font-size-medium);
+}
+
+.mid-segment-content {
+    margin-left: 0.5ch;
+    border-left: var(--theme-ligth-grey) var(--main-container-gap) solid;
+    padding: 0.4em 0.75em;
+    width: fit-content;
+    display: flex;
+    flex-direction: column;
+}
+
+.embedded-code {
+    margin: 0.25vw 0;
+    padding: 1vw;
+    white-space: pre;
+    background-color: var(--theme-grey);
+    border: var(--theme-ligth-grey) 0.1vw solid;
+    border-radius: 0.5vw;
+}
+
+#shalalala {
+    width: 20vw;
+}
