@@ -21,7 +21,7 @@ const questionsDB = [
     },
     {
         question: "Komu w 1917 roku Matka Boska przekazała trzy tajemnice fatimskie?",
-        answers: ["skazańcom", "astuszkom", "żołnierzom", "biskupom"],
+        answers: ["skazańcom", "pastuszkom", "żołnierzom", "biskupom"],
         correct: "pastuszkom"
     },
     {

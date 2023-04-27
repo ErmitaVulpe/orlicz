@@ -76,7 +76,7 @@ body {
 .panel-left-background-blur {
     height: 100%;
     width: 99.9%;
-    backdrop-filter: blur(0.5vw);
+    backdrop-filter: blur(0.35vw);
     z-index: 10;
     pointer-events: none;
 }
