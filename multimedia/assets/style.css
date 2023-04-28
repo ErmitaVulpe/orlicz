@@ -67,7 +67,8 @@ body {
     width: var(--main-container-width);
     display: flex;
     gap: var(--main-container-gap);
-    background-color: var(--theme-ligth-grey);
+    background: var(--theme-dark);
+    background: linear-gradient(90deg, var(--theme-dark) 0%, var(--theme-ligth-grey) 2%, var(--theme-ligth-grey) 98%, var(--theme-dark) 100%);
 }
 
 .main-container > div{
@@ -115,6 +116,10 @@ body {
     gap: 0.2vw;
 }
 
+.mid-segment > div {
+    max-width: 100%;
+}
+
 .mid-segment-title {
     font-size: var(--font-size-medium);
 }
@@ -139,6 +144,16 @@ body {
     font-family: inconsolata;
 }
 
-#shalalala {
+.cool-text {
+    font-size: var(--font-size-normal);
+    padding: 0.4vw 0;
+}
+
+.video-embed {
+    width: 25vw;
+    aspect-ratio: 16/9;
+}
+
+.audio-embed {
     width: 20vw;
 }

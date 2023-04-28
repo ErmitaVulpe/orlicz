@@ -27,12 +27,61 @@
         <div class="mid-segment">
           <div class="mid-segment-title">Osadzanie wideo z plików lokalnych.</div>
           <div class="mid-segment-content">
-            <video id="shalalala" autoplay controls>
+            <video class="video-embed" id="shalalala" controls>
               <source src="assets/multimedia/video/brazilian_hokage_saying_shahada.MP4" type="video/mp4">
             </video>
             <div class="text">Aby uzyskać taki efekt, należy w kodzie HTML umieścić poniższe znaczniki:</div>
             <div class="embedded-code" id="embedded-code-0"></div>
-            <div class="text">Należy też pamiętać o dodatkowych atrybutach tagu video.<br>&#9;autoplay - umożliwia automatyczne rozpoczęcie odtwarzania.<br>&#9;controls - autmatycznie pokazuje opcje dotyczące odtwarzania wideo</div>
+            <div class="text">Należy też pamiętać o dodatkowych atrybutach tagu video.<br>&#9;autoplay - umożliwia automatyczne rozpoczęcie odtwarzania.<br>&#9;controls - autmatycznie pokazuje opcje dotyczące odtwarzania wideo.</div>
+            <div class="text">Na przykład poniższy kod wstawi odtwarzacz wideo który automatycznie będzie mieć pokazane opcje dotyczące odtwarzania,
+            oraz automatyczne rozpocznie odtwarzanie.</div>
+            <div class="embedded-code" id="embedded-code-1"></div>
+          </div>
+        </div>
+        <div class="mid-segment">
+          <div class="mid-segment-title">Osadzanie wideo z sieci</div>
+          <div class="mid-segment-content">
+            <div class="text">Oczywiście nie trzeba osadzać wideo z plików lokalnych. Można też z internetu, na przykład z platformy YouTube:</div>
+            <!-- <iframe class="video-embed" src="https://www.youtube.com/embed/LAfZNeuHhP4?list=PLGdcNQeugLtkLaxx7P_skrG10lIXgWl6B" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe> -->
+            <div class="text">(Niektóre filmy z YouTube będą wyświetlane tylko po protokole HTTPS)</div>
+            <div class="text">Taki kod można łatwo wygenerować, klikając prawym przyciskiem myszy na jakimkolwiek filmiku na platformie YouTube.</div>
+            <div class="embedded-code" id="embedded-code-2"></div>
+            <br><br><br>
+            <!-- <iframe class="video-embed" src="https://www.youtube.com/embed/hyctIDPRSqY?list=PLGdcNQeugLtkLaxx7P_skrG10lIXgWl6B" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe> -->
+            <div class="embedded-code" id="embedded-code-3"></div>
+          </div>
+        </div>
+      </div>
+      <div class="big-segment">
+        <div class="big-segment-title">2. Osadzanie audio</div>
+        <div class="text">Osadzanie audio na stronie HTML jest równie ważne jak osadzanie wideo, szczególnie w przypadku, gdy strona internetowa oferuje treści dźwiękowe lub podcasty. Odtwarzanie audio na stronie HTML może zwiększyć zaangażowanie użytkowników i pozwolić im słuchać muzyki lub treści audio bezpośrednio na stronie internetowej, zamiast pobierania pliku audio na swoje urządzenie.</div>
+        <div class="mid-segment">
+          <div class="mid-segment-title">Osadzanie audio z plików lokalnych.</div>
+          <div class="mid-segment-content">
+            <audio class="audio-embed" controls>
+              <source src="assets/multimedia/audio/penismusic.mp3" type="audio/mp3">
+            </audio>
+            <div class="text">Aby uzyskać powyższy efekt należy umieścić w kodzie następujące znaczniki:</div>
+            <div class="embedded-code" id="embedded-code-4"></div>
+          </div>
+        </div>
+        <div class="mid-segment">
+          <div class="mid-segment-title">Osadzanie audio z sieci.</div>
+          <div class="mid-segment-content">
+            <div class="text">W internecie jest dostępnych wiele serwisów udostępnijących muzykę. Każdy z nich ma własny sposób osadzania multimediów, oraz ich wygląd.</div>
+            <div class="cool-text">Spotify</div>
+            <div class="text">Platforma Spotify posiada dwie główne osadzania. Pierwszy "kompaktowy" czyli o standardowych proporcjach dla odwarzaczy audio, oraz "normalny" czyli pasujący do wyglądu aplikacji Spotify.</div>
+            <div class="text">Odtwarzacz kompaktowy:</div>
+            <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/7B40TUv35niDQtvjZpnWb6?utm_source=generator" width="350px" height="80" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+            <div class="embedded-code" id="embedded-code-5"></div>
+            <br>
+            <div class="text">Odtwarzacz normalny:</div>
+            <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/0trTpNYmHAK3EihaZBd2h6?utm_source=generator" width="250" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+            <div class="embedded-code" id="embedded-code-6"></div>
+            <br>
+            <div class="cool-text">Soundcloud</div>
+            <iframe width="75%" height="125" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/483834900&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"></iframe><div style="font-size: 10px; color: #cccccc;line-break: anywhere;word-break: normal;overflow: hidden;white-space: nowrap;text-overflow: ellipsis; font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;font-weight: 100;"></div>
+            <div class="embedded-code" id="embedded-code-7"></div>
           </div>
         </div>
       </div>
@@ -41,3 +90,4 @@
 <script src="assets/IsertCodeToCodeDisplays.js"></script>
 <script src="assets/script.js"></script>
 </body>
+</html>
