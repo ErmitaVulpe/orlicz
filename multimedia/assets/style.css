@@ -71,7 +71,7 @@ body {
     background: linear-gradient(90deg, var(--theme-dark) 0%, var(--theme-ligth-grey) 2%, var(--theme-ligth-grey) 98%, var(--theme-dark) 100%);
 }
 
-.main-container > div{
+.main-container>div {
     background-color: var(--theme-dark);
 }
 
@@ -116,7 +116,7 @@ body {
     gap: 0.2vw;
 }
 
-.mid-segment > div {
+.mid-segment>div {
     max-width: 100%;
 }
 
@@ -156,4 +156,10 @@ body {
 
 .audio-embed {
     width: 20vw;
+}
+
+.img {
+    width: 20vw;
+    height: auto;
+    padding: 0.5vw 0;
 }
