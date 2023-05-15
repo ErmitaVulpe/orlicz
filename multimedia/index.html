@@ -12,7 +12,13 @@
   <div class="main-container">
     <div class="left-navigation-panel">
       <div class="left-navigation-panel-sticky-container">
-        dfg<br>sdf
+        <a class="left-navigation-panel-link" href="#"><div>Początek</div></a>
+        <a class="left-navigation-panel-link" href="#wideo"><div>Wideo</div></a>
+        <a class="left-navigation-panel-link" href="#audio"><div>Audio</div></a>
+        <a class="left-navigation-panel-link" href="#grafika"><div>Grafika</div></a>
+        <a class="left-navigation-panel-link" href="#gmaps"><div>Google maps</div></a>
+        <a class="left-navigation-panel-link" href="#bledy"><div>Błędy</div></a>
+        <a class="left-navigation-panel-link" href="#podsumowanie"><div>Podsumowanie</div></a>
       </div>
     </div>
     <div class="main">
@@ -22,7 +28,7 @@
       </div>
       <div class="horizontal-line"></div>
       <div class="big-segment">
-        <div class="big-segment-title">1. Osadzanie wideo</div>
+        <div class="big-segment-title" id="wideo">1. Osadzanie wideo</div>
         <div class="text">Osadzanie wideo na stronie HTML jest niezwykle popularnym sposobem prezentowania treści wideo w internecie. W dzisiejszych czasach, gdy wideo jest jednym z najskuteczniejszych sposobów przekazywania informacji, umieszczenie wideo na stronie internetowej może zwiększyć interakcję użytkowników i poprawić ich zaangażowanie.</div>
         <div class="mid-segment">
           <div class="mid-segment-title">Osadzanie wideo z plików lokalnych.</div>
@@ -47,13 +53,14 @@
             <div class="text">Taki kod można łatwo wygenerować, klikając prawym przyciskiem myszy na jakimkolwiek filmiku na platformie YouTube.</div>
             <div class="embedded-code" id="embedded-code-2"></div>
             <br><br><br>
-            <iframe class="video-embed" src="https://www.youtube.com/embed/hyctIDPRSqY?list=PLGdcNQeugLtkLaxx7P_skrG10lIXgWl6B" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            <iframe class="video-embed" src="https://www.youtube.com/embed/QYcLGAeCGsc" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
             <div class="embedded-code" id="embedded-code-3"></div>
           </div>
         </div>
       </div>
+      <div class="horizontal-line"></div>
       <div class="big-segment">
-        <div class="big-segment-title">2. Osadzanie audio</div>
+        <div class="big-segment-title" id="audio">2. Osadzanie audio</div>
         <div class="text">Osadzanie audio na stronie HTML jest równie ważne jak osadzanie wideo, szczególnie w przypadku, gdy strona internetowa oferuje treści dźwiękowe lub podcasty. Odtwarzanie audio na stronie HTML może zwiększyć zaangażowanie użytkowników i pozwolić im słuchać muzyki lub treści audio bezpośrednio na stronie internetowej, zamiast pobierania pliku audio na swoje urządzenie.</div>
         <div class="mid-segment">
           <div class="mid-segment-title">Osadzanie audio z plików lokalnych.</div>
@@ -85,8 +92,9 @@
           </div>
         </div>
       </div>
+      <div class="horizontal-line"></div>
       <div class="big-segment">
-        <div class="big-segment-title">3. Osadzanie grafiki</div>
+        <div class="big-segment-title" id="grafika">3. Osadzanie grafiki</div>
         <div class="text">Osadzanie grafiki na stronie HTML jest jednym z najważniejszych elementów projektowania stron internetowych. Grafika, tak jak wideo i audio, może przyciągnąć uwagę użytkowników i wzbogacić wizualną prezentację strony. Umieszczenie grafiki na stronie HTML może także pomóc w przekazywaniu informacji lub dodatkowo uzupełniać treść.</div>
         <div class="mid-segment">
           <div class="mid-segment-title">Osadzanie grafiki z plików lokalnych</div>
@@ -116,19 +124,85 @@
           </div>
         </div>
       </div>
+      <div class="horizontal-line"></div>
       <div class="big-segment">
-        <div class="big-segment-title">3. Osadzanie map Google</div>
+        <div class="big-segment-title" id="gmaps">4. Osadzanie map Google</div>
         <div class="text">Osadzanie map Google na stronie HTML jest często wykorzystywane w celu przedstawienia informacji o lokalizacji biznesu lub wydarzenia. Mapy Google pozwalają użytkownikom na łatwe znalezienie i zlokalizowanie interesującego ich miejsca na mapie. Dodanie mapy Google na stronę HTML może również pomóc w zwiększeniu interakcji z użytkownikami oraz ułatwić im znalezienie potrzebnych informacji.</div>
         <div class="mid-segment">
-          <div class="mid-segment-title">Osadzanie grafiki z sieci</div>
+          <div class="mid-segment-title">Mapa z wieloma obiektami</div>
           <div class="mid-segment-content">
-            
+            <iframe class="gmaps-embed" src="https://www.google.com/maps/d/embed?mid=1bkXd4HsQ3gBSl50q806JJ_qqTCE&hl=en&ehbc=2E312F"></iframe>
+            <div class="embedded-code" id="embedded-code-12"></div>
+          </div>
+        </div>
+        <div class="mid-segment">
+          <div class="mid-segment-title">Mapa z trasą</div>
+          <div class="mid-segment-content">
+            <div class="text">Mapa z trasą z przybliżonej obecnej lokalizacji do ZS36<br>Mapa nie będzie pokazywać poprawnej trasy jeżeli świadomie lub nieświadomie zakłócasz swoje położenie</div>
+            <iframe class="gmaps-embed" frameborder="0" style="border:0" src="https://www.google.com/maps/embed/v1/directions?origin=Current%20Location&destination=place_id:ChIJgUs--GHLHkcRRsq4jpVHbzI&key=AIzaSyC-5CY9mOCeg5Y3IhPqi_Yd0-DZtWrJl-E" allowfullscreen></iframe>
+            <div class="embedded-code" id="embedded-code-13"></div>
+          </div>
+        </div>
+        <div class="mid-segment">
+          <div class="mid-segment-title">Mapa z trasą rowerową</div>
+          <div class="mid-segment-content">
+            <iframe class="gmaps-embed" src="https://www.google.com/maps/embed?pb=!1m28!1m12!1m3!1d39111.31653344697!2d20.96458196618042!3d52.21690937749413!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m13!3e1!4m5!1s0x471ecd30c0e362a3%3A0xd0d33b4cfb781897!2sSobieskiego%20100%2C%20Warsaw%2C%20Poland!3m2!1d52.1971018!2d21.040973599999997!4m5!1s0x471ecb61f83e4b81%3A0x326f47958eb8ca46!2sTechnikum%20Elektroniczne%20nr%201%2C%20Marcina%20Kasprzaka%2021%2C%20Warsaw%2C%20Poland!3m2!1d52.2284747!2d20.9706302!5e0!3m2!1sen!2sde!4v1683716074438!5m2!1sen!2sde" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            <div class="embedded-code" id="embedded-code-14"></div>
+          </div>
+        </div>
+        <div class="mid-segment">
+          <div class="mid-segment-title">Mapa z pineską z ZS36</div>
+          <div class="mid-segment-content">
+            <iframe class="gmaps-embed" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d34847.2243812369!2d20.967741499714126!3d52.23872769439283!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x471ecb61f83e4b81%3A0x326f47958eb8ca46!2sTechnikum%20Elektroniczne%20nr%201!5e0!3m2!1sen!2sde!4v1683716412234!5m2!1sen!2sde" tyle="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            <div class="embedded-code" id="embedded-code-15"></div>
+          </div>
+        </div>
+        <div class="mid-segment">
+          <div class="mid-segment-title">Mapa z charakterystyczny punktem</div>
+          <div class="mid-segment-content">
+            <div class="text">Znana ulica w Grabowcu</div>
+            <iframe class="gmaps-embed" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1723.001874340683!2d18.718404219778375!3d52.96378733838728!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x471cca13526b2af9%3A0xb6b24e4966338f96!2sObi-Wana%20Kenobiego%2C%2087-162%20Grabowiec%2C%20Poland!5e0!3m2!1sen!2sde!4v1683717030793!5m2!1sen!2sde" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            <div class="embedded-code" id="embedded-code-16"></div>
           </div>
         </div>
       </div>
+      <div class="horizontal-line"></div>
+      <div class="big-segment">
+        <div class="big-segment-title" id="bledy">Możliwe błędy w zamieszczaniu multimediów.</div>
+        <div class="text">Osadzanie multimediów na stronie HTML może czasami prowadzić do wystąpienia pewnych błędów lub problemów. Oto dwa z nich:</div>
+        <div class="mid-segment">
+          <div class="mid-segment-title">Niepoprawne wymiary tagu iframe</div>
+          <div class="mid-segment-content">
+            <div class="text">Jeśli osadzasz multimedia, takie jak mapa Google lub wideo, za pomocą znacznika &lt;iframe&gt;, ważne jest, aby podać poprawne wymiary, aby umieścić multimedia w odpowiednim miejscu na stronie. Nieprawidłowe wymiary mogą prowadzić do nieprawidłowego wyświetlania multimediów, co wpłynie na ogólny wygląd i funkcjonalność strony.</div>
+            <iframe style="width: 20vw; aspect-ratio: 0.75;" src="https://www.youtube.com/embed/LAfZNeuHhP4?list=PLGdcNQeugLtkLaxx7P_skrG10lIXgWl6B" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            <div class="embedded-code" id="embedded-code-17"></div>
+          </div>
+        </div>
+        <div class="mid-segment">
+          <div class="mid-segment-title">Opcje odtwarzania wideo nie pokzują się</div>
+          <div class="mid-segment-content">
+            <div class="text">W przypadku osadzania wideo na stronie HTML, jeśli opcje dotyczące odtwarzania, takie jak regulacja głośności lub kontrolki odtwarzacza wideo, nie są wyświetlane, może to być spowodowane brakiem poprawnej konfiguracji lub zastosowania nieprawidłowego kodu. W takim przypadku należy sprawdzić kod i upewnić się, że został poprawnie skonfigurowany, aby wyświetlać wszystkie niezbędne opcje odtwarzania.</div>
+            <div class="text">Bez atrybutu controls:</div>
+            <video class="video-embed" id="shalalala">
+              <source src="assets/multimedia/video/TF2_india.MP4" type="video/mp4">
+            </video>
+            <div class="embedded-code" id="embedded-code-18"></div>
+            <div class="text">Z atrybutem controls:</div>
+            <video class="video-embed" id="shalalala" controls>
+              <source src="assets/multimedia/video/TF2_india.MP4" type="video/mp4">
+            </video>
+            <div class="embedded-code" id="embedded-code-19"></div>
+          </div>
+        </div>
+      </div>
+      <div class="horizontal-line"></div>
+      <div class="big-segment">
+        <div class="big-segment-title" id="podsumowanie">Podsumowanie</div>
+        <div class="text">Omówiliśmy kilka ważnych aspektów dotyczących osadzania multimediów na stronie HTML. Zaprezentowaliśmy, jak poprawnie osadzić wideo, audio, grafikę oraz mapy Google na stronie HTML, oraz jakie błędy mogą wystąpić podczas tego procesu. Omówiliśmy dwa najczęstsze błędy, czyli nieprawidłowe wymiary &lt;iframe&gt; oraz nieprawidłowe wyświetlanie opcji odtwarzania wideo.</div>
+      </div>
     </div>
   </div>
-<script src="assets/InsertCodeToCodeDisplays.js"></script>
 <script src="assets/script.js"></script>
+<script src="assets/InsertCodeToCodeDisplays.js"></script>
 </body>
 </html>

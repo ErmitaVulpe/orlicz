@@ -14,7 +14,7 @@
     --main-container-offset: 2%;
     --main-container-gap: 0.15em;
     --main-container-width: 60%;
-    --navigation-panel-width: 20%;
+    --navigation-panel-width: 25%;
 }
 
 ::-webkit-scrollbar {
@@ -83,6 +83,21 @@ body {
     height: fit-content;
     position: sticky;
     top: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.left-navigation-panel-link {
+    padding: 0.4em 0 0.4em 0.4em;
+    border-bottom: 0.2vw solid var(--theme-grey);
+    color: var(--theme-washed-white);
+    font-size: var(--font-size-normal);
+    text-decoration: none;
+}
+
+.left-navigation-panel-link:hover div {
+    scale: 1.2;
+    transform-origin: left;
 }
 
 .main {
@@ -157,6 +172,11 @@ body {
 
 .audio-embed {
     width: 20vw;
+}
+
+.gmaps-embed {
+    width: 30vw;
+    aspect-ratio: 1.33;
 }
 
 .img {
