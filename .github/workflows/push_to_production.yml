@@ -8,5 +8,5 @@ jobs:
     steps:
       - run: cd ${{ secrets.PUSH_PRODUCTION_PATH }}
       - run: echo -e "README.md\n.github/" >> ./.gitignore
-      - run: git pull
+      - run: git clone https://github.com/ErmitaVulpe/orlicz
       - run: rm ./.gitignore
