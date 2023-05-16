@@ -6,7 +6,6 @@ jobs:
   push_to_production:
     runs-on: self-hosted
     steps:
-      - run: cd ${{ secrets.PUSH_PRODUCTION_PATH }}
-      - run: echo -e "README.md\n.github/" >> ./.gitignore
-      - run: git pull
-      - run: rm ./.gitignore
+      - run: echo -e "README.md\n.github/" >> ${{ secrets.PUSH_PRODUCTION_PATH }}/.gitignore
+      - run: git -C ${{ secrets.PUSH_PRODUCTION_PATH }} pull
+      - run: rm ${{ secrets.PUSH_PRODUCTION_PATH }}/.gitignore
