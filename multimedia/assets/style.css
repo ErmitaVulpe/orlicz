@@ -11,9 +11,9 @@
     --font-size-medium: 1.6vw;
     --font-size-normal: 1.25vw;
     --font-size-small: 1vw;
-    --main-container-offset: 2%;
+    --main-container-offset: 2vw;
     --main-container-gap: 0.15em;
-    --main-container-width: 63%;
+    --main-container-width: 63vw;
     --navigation-panel-width: 25%;
 }
 
@@ -108,12 +108,33 @@ body {
     font-size: var(--font-size-big)
 }
 
-.main-container {
+.main-container-container {
     position: absolute;
     top: 0;
-    left: calc(50% + var(--main-container-offset));
-    transform: translateX(-50%);
-    width: var(--main-container-width);
+    left: 0;
+    width: 100vw;
+    display: grid;
+    grid-template-columns: calc((100vw - var(--main-container-width) + var(--main-container-offset)) / 2) var(--main-container-width) calc((100vw - var(--main-container-width) - var(--main-container-offset)) / 2);
+}
+
+.add {
+   height: 100%;
+}
+
+.add-sticky-container {
+    position: sticky;
+    top: 0;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.add-sticky-container img {
+width: 70%;
+}
+
+.main-container {
     display: flex;
     gap: var(--main-container-gap);
     background: var(--theme-dark);
@@ -201,12 +222,17 @@ body {
 .embedded-code {
     margin: 0.25vw 0;
     padding: 1vw;
-    white-space: pre;
+    overflow-wrap: break-word;
     background-color: var(--theme-grey);
     border: var(--theme-ligth-grey) 0.1vw solid;
     border-radius: 0.5vw;
     width: fit-content;
+    max-width: calc(100% - 2.2vw);
     font-family: inconsolata;
+    -webkit-user-select: text;
+    -moz-user-select: text;
+    -ms-user-select: text;
+    user-select: text;
 }
 
 .cool-text {
