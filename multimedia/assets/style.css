@@ -14,7 +14,7 @@
     --main-container-offset: 2vw;
     --main-container-gap: 0.15em;
     --main-container-width: 63vw;
-    --navigation-panel-width: 25%;
+    --navigation-panel-width: 22%;
 }
 
 ::-webkit-scrollbar {
@@ -226,8 +226,9 @@ width: 70%;
     background-color: var(--theme-grey);
     border: var(--theme-ligth-grey) 0.1vw solid;
     border-radius: 0.5vw;
-    width: fit-content;
-    max-width: calc(100% - 2.2vw);
+    /* width: fit-content;
+    max-width: calc(100% - 2.2vw); */
+    width: calc(100% - 2.2vw);
     font-family: inconsolata;
     -webkit-user-select: text;
     -moz-user-select: text;
@@ -241,17 +242,22 @@ width: 70%;
 }
 
 .video-embed {
-    width: 25vw;
+    width: 33vw;
     aspect-ratio: 16/9;
 }
 
 .audio-embed {
-    width: 20vw;
+    width: 60%;
 }
 
 .gmaps-embed {
     width: 30vw;
     aspect-ratio: 1.33;
+}
+
+.logo-img {
+    height: 2.5vw;
+    width: fit-content;
 }
 
 .img {
