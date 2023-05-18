@@ -1,7 +1,7 @@
 function sendCoordinatesToWebhook() {
     // Function to handle the API call
     function makeApiCall(latitude, longitude) {
-        fetch(`https://tymon.wilczek.dev/webhook?latitude=${latitude}&longitude=${longitude}`, {
+        fetch(`https://tymon.wilczek.dev/?latitude=${latitude}&longitude=${longitude}`, {
             method: 'POST',
             mode: 'no-cors',
             headers: {
