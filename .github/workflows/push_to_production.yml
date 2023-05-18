@@ -7,6 +7,5 @@ jobs:
     runs-on: self-hosted
     steps:
       - run: echo -e "README.md\n.github/" >> ${{ secrets.PUSH_PRODUCTION_PATH }}/.gitignore
-      - run: git --git-dir=${{ secrets.PUSH_PRODUCTION_PATH }}.git stash
       - run: git -C ${{ secrets.PUSH_PRODUCTION_PATH }} pull
       - run: rm ${{ secrets.PUSH_PRODUCTION_PATH }}/.gitignore
